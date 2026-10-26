@@ -10,7 +10,7 @@ A lightweight Playwright + TypeScript automation starter using Page Object Model
 ## Quick start
 
 ```bash
-npm install
+npm ci
 npx playwright install chromium
 npm test
 ```
@@ -24,7 +24,7 @@ npm run test:ui
 npm run test:report
 ```
 
-Commit the generated `package-lock.json` after installing dependencies, then change CI from `npm install` to `npm ci` for reproducible builds.
+Commit the generated `package-lock.json` after installing dependencies, then change CI from `npm ci` to `npm ci` for reproducible builds.
 
 ## Structure
 

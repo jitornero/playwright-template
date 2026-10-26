@@ -25,13 +25,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install dependencies
-        run: npm install
-      - name: Generate lockfile for initial bootstrap
-        run: |
-          echo 'LOCKFILE_START'
-          base64 -w0 package-lock.json
-          echo
-          echo 'LOCKFILE_END'
+        run: npm ci
       - name: Type-check
         run: npm run typecheck
       - name: Run tests
