@@ -24,7 +24,7 @@ npm run test:ui
 npm run test:report
 ```
 
-Commit the generated `package-lock.json` after installing dependencies, then change CI from `npm ci` to `npm ci` for reproducible builds.
+The committed `package-lock.json` pins the resolved dependencies. Use `npm ci` for reproducible installations; use `npm install` when intentionally adding or updating dependencies and commit the updated lockfile.
 
 ## Structure
 
