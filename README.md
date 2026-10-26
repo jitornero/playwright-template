@@ -24,7 +24,7 @@ npm run test:ui
 npm run test:report
 ```
 
-Commit the generated `package-lock.json` after installing dependencies, then change CI from `npm ci` to `npm ci` for reproducible builds.
+The committed `package-lock.json` pins the resolved dependencies. Use `npm ci` for reproducible installations; use `npm install` when intentionally adding or updating dependencies and commit the updated lockfile.
 
 ## Structure
 
@@ -50,6 +50,10 @@ The login test uses [SauceDemo](https://www.saucedemo.com/) and its public demo 
 ## Continuous integration
 
 GitHub Actions runs the job inside the official Playwright Docker image, which already contains Chromium and its Linux system dependencies. The workflow installs project npm packages, type-checks and runs the test on pull requests to `main`, merges/pushes to `main`, and manual dispatch. Reports and traces are uploaded on failure. No secrets are required for the public demo.
+
+## Scaling reference
+
+For optional patterns and architectural decisions as a project grows, see [Scaling Guide](docs/SCALING.md). This is **reference documentation only**: its example structures are not implemented in this template and are not a required roadmap.
 
 ## Reuse
 
