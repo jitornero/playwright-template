@@ -51,6 +51,10 @@ The login test uses [SauceDemo](https://www.saucedemo.com/) and its public demo 
 
 GitHub Actions runs the job inside the official Playwright Docker image, which already contains Chromium and its Linux system dependencies. The workflow installs project npm packages, type-checks and runs the test on pull requests to `main`, merges/pushes to `main`, and manual dispatch. Reports and traces are uploaded on failure. No secrets are required for the public demo.
 
+## Scaling reference
+
+For optional patterns and architectural decisions as a project grows, see [Scaling Guide](docs/SCALING.md). This is **reference documentation only**: its example structures are not implemented in this template and are not a required roadmap.
+
 ## Reuse
 
 Use **Use this template** on GitHub to create an independent repository and replace the example app and tests.
