@@ -19,13 +19,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
       - name: Install dependencies
         run: npm install
+      - name: Generate lockfile for initial bootstrap
+        run: |
+          echo 'LOCKFILE_START'
+          base64 -w0 package-lock.json
+          echo
+          echo 'LOCKFILE_END'
       - name: Type-check
         run: npm run typecheck
       - name: Run tests
